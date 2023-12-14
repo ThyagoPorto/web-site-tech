@@ -1,0 +1,312 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+
+}
+
+body{
+    background-color: var(--bg-cor);
+    color: var(--fonte-cor);
+     
+}
+
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+.navbar img {
+    padding-left: 40px;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+}
+
+.navbar li {
+    margin: 0 10px;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover, .dropdown:hover .dropbtn {
+    background-color: rgb(255, 170, 0);
+  }
+  
+  li.dropdown {
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .dropdown-content a:hover {background-color: black;}
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+a:hover:before {
+visibility: visible;
+-webkit-transform: scaleX(1);
+transform: scaleX(1);
+}
+
+.search-container{
+    width: 490px;
+    display: block;
+    margin: 0 auto;
+    padding-top: 50px;
+}
+
+input#search-bar{
+    margin: 0 auto;
+    width: 100%;
+    height: 45px;
+    padding: 0 20px;
+    font-size: 1rem;
+    border: 1px solid #D0CFCE;
+    border-radius:8px;
+    outline: none;
+    &:focus{
+        border: 3px solid yellow;
+        transition: 0.35s ease;
+        color: #000000;
+        &::-webkit-input-placeholder{
+            transition: opacity 0.45s ease; 
+            opacity: 0;
+        }
+        &::-moz-placeholder {
+            transition: opacity 0.45s ease; 
+            opacity: 0;
+        }
+        &:-ms-placeholder {
+            transition: opacity 0.45s ease; 
+            opacity: 0;
+        }    
+    }
+}
+
+.search-icon{
+    position: relative;
+    float: right;
+    width: 75px;
+    height: 75px;
+    top: -62px;
+}
+
+:root {
+    --bg-cor: #FFD700;
+    --fonte-cor: #000000;
+    --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/lua.png");
+    --trono-img: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/trono-preto.png"); 
+}
+
+.dark-mode {
+    --bg-cor: black;
+    --fonte-cor: #ffffff;
+    --label-icon: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/sol.png");
+    --trono-img: url("https://caelum-online-public.s3.amazonaws.com/1369-alura-mais-dark-mode/trono-branco.png");
+}
+
+.dark-mode h1,
+.dark-mode h2,
+.dark-mode h3,
+.dark-mode h4,
+.dark-mode h5,
+.dark-mode h6,
+.dark-mode p  {
+    color: #ffffff; /* Altere para a cor desejada para o texto no modo escuro */
+}
+
+.mudar-tema {
+    position: absolute;
+    top: 4%;
+    left: 2%;
+    background-image: var(--label-icon); 
+    background-repeat: no-repeat;
+    padding: 67px;
+    cursor: pointer; 
+}
+
+#btn {
+    display: none;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
+    padding: 20px;
+}
+
+.hero-text {
+    width: 50%;
+}
+
+.hero-text h1 {
+    font-size: 48px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    font-size: 20px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.hero-text button {
+    padding: 10px 20px;
+    border: 2px solid #555555;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+    -webkit-transition-duration: 0.4s;1s;
+    transition-duration: 0.4s;
+}
+
+.hero-text button:hover {
+    background-color: #555555;
+    color: white;
+    box-shadow: 0 16px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+
+.hero-video {
+    width: 50%;
+}
+
+.hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.features {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.feature {
+    width: 30%;
+    text-align: center;
+}
+
+.feature-icon {
+    border-radius: 5px;
+    width: 250px;
+    height: 300px;
+    margin: 0 auto;
+    object-fit: fill;
+    padding:2px;
+    border: 10px solid white;
+    border-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='50' height='50'><defs><linearGradient id='redgradient'><stop offset='0' stop-color='%23FFC14D'/><stop offset='0.362' stop-color='%23FF4834'/><stop offset='1' stop-color='%233B0300'/></linearGradient></defs><g id='Layer_1'><path d='M0,0 L50,0 L50,50 L0,50 L0,0 z' fill='url(%23redgradient)' width='100%' height='100%'/></g></svg>") 10% stretch;
+}
+
+.feature-title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+
+}
+
+.feature-description {
+    font-size: 18px;
+    color: #666;
+    margin-top: 10px;
+}
+
+.rodape {
+    background-color: rgba(243, 110, 32, 0.5);
+    color: white;
+    height: auto;
+    font-size: 14px;
+    font-family: helvetica;
+    margin-top: 150px;
+    text-aling: center;
+
+}
+.rodape a{
+    text-decoration: none;
+    color: white;
+}
+.rodape p{
+    margin-bottom: 5px;
+}
+.rodape-div{
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+    margin: auto;
+    align-items: stretch;
+    padding: 60px 10px 40px 10px;
+}
+.rodape-div-1, .rodape-div-2, .rodape-div-3, .rodape-div-4{
+    display: flex;
+    width: calc(100% / 4 - 20px);
+    padding: 10px;
+}
+.rodape span{
+    font-size: 20px;
+    color: white;
+}
+.rodape-direitos{
+    width: 100%;
+    background-color: black;
+    padding: 10px;
+    margin: 0;
+    text-align: center;
+}
+/*mobile*/
+@media (max-width: 768px) {
+    .rodape-div{
+        padding: 60px 0px 40px 0px;
+    }
+}
